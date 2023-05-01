@@ -8,18 +8,31 @@ import pageIcon from '../images/page-icon.png';
 const SocialLinks = () => {
     return(
         <div>
+
+            
             <IconButton aria-label="GitHub" size="small" href="https://github.com/Mya-Junkin" target="_blank">
                 <img src={ githubIcon } alt="GitHub Icon"/>
             </IconButton>
-            <IconButton aria-label="LinkedIn" size="small" href="https://github.com/Mya-Junkin" target="_blank">
+            
+
+            
+            <IconButton aria-label="LinkedIn" size="small" href="https://www.linkedin.com/in/mya-junkin-b57b981b3/" target="_blank">
                 <img src={ linkedinIcon }  alt="LinkedIn Icon"/>
             </IconButton>
-            <IconButton aria-label="YouTube" size="small" href="https://github.com/Mya-Junkin" target="_blank">
+            
+
+            
+            <IconButton aria-label="YouTube" size="small" href="https://www.youtube.com/channel/UCN2cKSx5Ob1QEAl731Ti5Gw" target="_blank">
                 <img src={ youtubeIcon }  alt="YouTube Icon"/>
             </IconButton>
-            <IconButton aria-label="Resume" size="small" href="https://github.com/Mya-Junkin" target="_blank">
+            
+
+            
+            <IconButton aria-label="Resume" size="small" href="https://drive.google.com/file/d/1xIzmu4UBONzI3tlfnA_A2WEyLBIF_J1Z/view?usp=share_link" target="_blank">
                 <img src={ pageIcon }  alt="Resume Icon"/>
             </IconButton>
+            
+
         </div>
     );
 }

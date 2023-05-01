@@ -1,5 +1,7 @@
 import {Grid, Typography} from '@material-ui/core';
 import useStyles from '../styles.js';
+import { ThemeProvider } from '@material-ui/core';
+import theme from '../theme.js';
 
 import reactIcon from '../images/react-icon.png';
 import javascriptIcon from '../images/javascript-icon.png';
@@ -19,7 +21,7 @@ const SkillsSection = () => {
     const classes = useStyles();
 
     return(
-        <div>
+        <ThemeProvider theme={ theme }>
             <Typography variant='h2'>SKILLS</Typography>
             <Grid container className={classes.skillsGrid}>
                 <Grid item xs={4}>
@@ -43,7 +45,7 @@ const SkillsSection = () => {
                     <item><img src={ postgresqlIcon } alt="PostgreSQL Icon" /><Typography>PostgreSQL</Typography></item>
                 </Grid>
             </Grid>
-        </div>
+        </ ThemeProvider>
     );
 }
 

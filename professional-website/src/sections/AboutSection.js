@@ -1,5 +1,7 @@
 import {Grid, Typography} from '@material-ui/core';
 import useStyles from '../styles.js';
+import { ThemeProvider } from '@material-ui/core';
+import theme from '../theme.js';
 
 import selfieIll from '../images/selfie-illustration.png';
 
@@ -8,8 +10,8 @@ const AboutSection = () => {
     const classes = useStyles();
 
     return(
-        <div>
-            <Typography variant='h2'>ABOUT</Typography>
+        <ThemeProvider theme={ theme }>
+            <Typography variant='h2' >ABOUT</Typography>
             <Grid container className={classes.landingGrid}>
                 <Grid item xs={6}>
                     <item><Typography>
@@ -31,7 +33,7 @@ const AboutSection = () => {
                     <item><img src={ selfieIll } alt="Illustration" className={classes.landingIll} /></item>
                 </Grid>
             </Grid>
-        </div>
+        </ThemeProvider>
     );
 }
 

@@ -1,15 +1,13 @@
 import React from 'react';
-import { CssBaseline, IconButton } from '@material-ui/core';
+import { CssBaseline} from '@material-ui/core';
 import useStyles from './styles.js';
 
-import SocialLinks from './components/SocialLinks.js';
 import LandingSection from './sections/LandingSection.js';
 import SkillsSection from './sections/SkillsSection.js';
 import ProjectSection from './sections/ProjectSection.js';
 import AboutSection from './sections/AboutSection.js';
 import ContactSection from './sections/ContactSection.js';
-
-import jumpUpIcon from './images/jumpup-icon.png';
+import Footer from './sections/Footer.js';
 
 
 const App = () => {
@@ -18,10 +16,6 @@ const App = () => {
     return (
         <div className={ classes.App }>
         <CssBaseline />
-        <header>
-            <SocialLinks />
-        </header>
-
 
         <main>
             
@@ -30,16 +24,9 @@ const App = () => {
             <ProjectSection />
             <AboutSection />
             <ContactSection />
+            <Footer />
             
         </main>
-
-
-        <footer>
-            <IconButton aria-label="Jump Up" size="small">
-                <img src={ jumpUpIcon } alt="Up Arrow"/>
-            </IconButton>
-            <SocialLinks />
-        </footer>
         </div>
     );
 }
