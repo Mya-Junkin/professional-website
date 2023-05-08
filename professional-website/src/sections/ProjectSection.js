@@ -25,9 +25,57 @@ import theme from '../theme.js';
  *  
  */
 
-function Project({title, source, live, collaborators, description, technologies, embed}) {
+function Project({title, source, live = null, collaborators = null, description, technologies, embed}) {
     const classes = useStyles();
 
+    // returns false if live link is given, true if live is null
+    const disableLive = (live) => {
+        let output=false;
+        if (live) {
+            output=true;
+        }
+        return(output);
+    }
+
+    // returns false if collaborators is given, true if collaborators is null
+    const disableCollab = (collaborators) => {
+        let output=false;
+        if (collaborators){
+            output=true;
+        }
+        return(output);
+    }
+
+    if (!disableCollab(collaborators)){
+        return(
+            <CardContent variant="outlined" className={classes.ProjectCard}>
+            <Grid container spacing={4}>
+                <Grid item xs={12} sm={6}>
+                    <iframe style={{aspectRatio: '16/9', width: '100%',}} src={ embed } title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+                </Grid>
+                <Grid item xs={12} sm container>
+                    <Grid item xs container direction="column" spacing={2}>
+                        <Grid item >
+                            <Typography variant='h4'>{ title }</Typography>
+                        </Grid>
+                        <Grid item>
+                            <Button variant='outlined' color={'secondary'} style={{border: '3px solid', margin: '1vh'}} href={ source } target='_blank'>Source Code</Button>
+                            <Button variant='outlined' color={disableLive(live) ? 'secondary': 'default'} style={{border: '3px solid', margin: '1 vh'}} disable={disableLive(live)} href={live} target='_blank'>See Live</Button>
+                        </Grid>
+                    <Grid item>
+                        <Typography>
+                            { description }
+                        </Typography>
+                        <Typography style={{color: '#FED154', marginTop: '1vh'}}>
+                            Technologies: { technologies }
+                        </Typography>
+                    </Grid>
+                </Grid>
+            </Grid>
+          </Grid>
+            </CardContent>
+        );
+    }else{
     return(
         <CardContent variant="outlined" className={classes.ProjectCard}>
         <Grid container spacing={4}>
@@ -41,7 +89,7 @@ function Project({title, source, live, collaborators, description, technologies,
                     </Grid>
                     <Grid item>
                         <Button variant='outlined' color={'secondary'} style={{border: '3px solid', margin: '1vh'}} href={ source } target='_blank'>Source Code</Button>
-                        <Button variant='outlined' color={'secondary'} style={{border: '3px solid', margin: '1 vh'}} href={live} target='_blank'>See Live</Button>
+                        <Button variant='outlined' color={disableLive(live) ? 'secondary': 'default'} style={{border: '3px solid', margin: '1 vh'}} disable={disableLive(live)} href={live} target='_blank'>See Live</Button>
                     </Grid>
                 <Grid item>
                     <Typography>
@@ -59,6 +107,7 @@ function Project({title, source, live, collaborators, description, technologies,
       </Grid>
         </CardContent>
     );
+    }
 }
 
 
@@ -72,7 +121,7 @@ const ProjectSection = () => {
                 title='Photographer Portfolio Website' 
                 source={'http://www.google.com'} 
                 live={'http://www.youtube.com'} 
-                collaborators='n/a' 
+                // No collaborators
                 description='Fullstack website for professional photography service. Provides an easy and user-friendly display of past photoshoots and ability to book an appointment for a consultation.' 
                 technologies='NodeJS, React, DynamoDB' 
                 embed = 'https://www.youtube.com/embed/sgQLiNGQIuM'
@@ -81,7 +130,7 @@ const ProjectSection = () => {
             <Project 
                 title='Emergency Action Plan Mobile App' 
                 source={'http://www.google.com'} 
-                live={'http://www.youtube.com'} 
+                // No live available
                 collaborators='Befikadu Kedebe, Katrina Cortipassi' 
                 description='Mobile app developed with West Virginia University Athlete Trainers as the customers. Purpose is to store, edit, and distribute emergency action plans for cases of medical emergencies.' 
                 technologies='React Native, Microsoft Azure Database' 
