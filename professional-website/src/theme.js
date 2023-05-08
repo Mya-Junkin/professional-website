@@ -22,23 +22,32 @@ let theme = createTheme({
         textTransform: 'uppercase',
         fontSize: '4rem'
       },
+      
       subtitle1: {
         color: '#C9C5C0', //secondary white
         fontFamily: 'Arial Black',
       },
+
       h2: {
         fontFamily: 'Arial Black',
         textTransform: 'uppercase',
       },
+
       h3: {
         fontFamily: 'Arial Black',
         textTransform: 'uppercase',
-
+        fontSize: '2rem'
       },
+
       h4: {
+        color: '#C9C5C0',
         fontFamily: 'Arial Black',
 
       },
+
+      body1: {
+        fontFamily: 'Arial'
+      }
     },
 
   });

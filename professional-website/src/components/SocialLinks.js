@@ -11,25 +11,25 @@ const SocialLinks = () => {
 
             
             <IconButton aria-label="GitHub" size="small" href="https://github.com/Mya-Junkin" target="_blank">
-                <img src={ githubIcon } alt="GitHub Icon"/>
+                <img src={ githubIcon } alt="GitHub Icon" style={{padding: '1vw 0.5vw'}} />
             </IconButton>
             
 
             
             <IconButton aria-label="LinkedIn" size="small" href="https://www.linkedin.com/in/mya-junkin-b57b981b3/" target="_blank">
-                <img src={ linkedinIcon }  alt="LinkedIn Icon"/>
+                <img src={ linkedinIcon }  alt="LinkedIn Icon" style={{padding: '1vw 0.5vw'}} />
             </IconButton>
             
 
             
             <IconButton aria-label="YouTube" size="small" href="https://www.youtube.com/channel/UCN2cKSx5Ob1QEAl731Ti5Gw" target="_blank">
-                <img src={ youtubeIcon }  alt="YouTube Icon"/>
+                <img src={ youtubeIcon }  alt="YouTube Icon" style={{padding: '1vw 0.5vw'}} />
             </IconButton>
             
 
             
             <IconButton aria-label="Resume" size="small" href="https://drive.google.com/file/d/1xIzmu4UBONzI3tlfnA_A2WEyLBIF_J1Z/view?usp=share_link" target="_blank">
-                <img src={ pageIcon }  alt="Resume Icon"/>
+                <img src={ pageIcon }  alt="Resume Icon" style={{padding: '1vw 0.5vw'}} />
             </IconButton>
             
 

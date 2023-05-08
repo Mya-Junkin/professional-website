@@ -11,10 +11,12 @@ const Footer = () => {
 
     return(
         <ThemeProvider theme={ theme }>
+            <div style={{backgroundColor: '#3B4046', display: 'flex', alignItems: 'center', justifyItems: 'center', flexDirection: 'column', padding: '5vh'}}>
             <IconButton aria-label="Jump Up" size="small">
                 <img src={ jumpUpIcon } alt="Up Arrow"/>
             </IconButton>
             <SocialLinks />
+            </div>
         </ThemeProvider>
     );
 }

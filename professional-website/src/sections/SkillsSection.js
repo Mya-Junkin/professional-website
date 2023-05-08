@@ -1,6 +1,5 @@
-import {Grid, Typography} from '@material-ui/core';
+import {Grid, Typography, ThemeProvider, Paper} from '@material-ui/core';
 import useStyles from '../styles.js';
-import { ThemeProvider } from '@material-ui/core';
 import theme from '../theme.js';
 
 import reactIcon from '../images/react-icon.png';
@@ -22,29 +21,70 @@ const SkillsSection = () => {
 
     return(
         <ThemeProvider theme={ theme }>
+            <Paper className={classes.SkillsPaper}>
             <Typography variant='h2'>SKILLS</Typography>
-            <Grid container className={classes.skillsGrid}>
-                <Grid item xs={4}>
-                    <item><Typography varient="h3">FRONTEND</Typography></item>
-                    <item><img src={ reactIcon } alt="React Icon" /><Typography>React</Typography></item>
-                    <item><img src={ javascriptIcon } alt="JavaScript Icon" /><Typography>JavaScript</Typography></item>
-                    <item><img src={ htmlIcon } alt="HTML5 Icon" /><Typography>HTML</Typography></item>
-                    <item><img src={ cssIcon } alt="CSS3 Icon" /><Typography>CSS</Typography></item>
+            <Grid container className={classes.SkillsGrid}>
+                <Grid item xs={12} sm={12} md={4} container>
+                    <Grid item xs={12} className={classes.SkillsCat}>
+                        <Typography variant="h3">FRONTEND</Typography>
+                    </Grid>
+                    <Grid item xs={6} className={classes.SkillsCat}>
+                        <img src={ reactIcon } alt="React Icon" />
+                        <Typography>React</Typography>
+                    </Grid>
+                    <Grid item xs={6} className={classes.SkillsCat}>
+                        <img src={ javascriptIcon } alt="JavaScript Icon" />
+                        <Typography>JavaScript</Typography>
+                    </Grid>
+                    <Grid item xs={6} className={classes.SkillsCat}>
+                        <img src={ htmlIcon } alt="HTML5 Icon" />
+                        <Typography>HTML</Typography>
+                    </Grid>
+                    <Grid item xs={6} className={classes.SkillsCat}>
+                        <img src={ cssIcon } alt="CSS3 Icon" />
+                        <Typography>CSS</Typography>
+                    </Grid>
                 </Grid>
-                <Grid item xs={4}>
-                    <item><Typography varient="h3">TOOLS</Typography></item>
-                    <item><img src={ safeIcon } alt="SAFe Icon" /><Typography>SAFe</Typography></item>
-                    <item><img src={ agileIcon } alt="Agile Icon" /><Typography>Agile</Typography></item>
-                    <item><img src={ dockerIcon } alt="Docker Icon" /><Typography>Docker</Typography></item>
-                    <item><img src={ gitIcon } alt="Git Icon" /><Typography>Git</Typography></item>
+                <Grid item xs={12} sm={12} md={4} container>
+                    <Grid item xs={12} className={classes.SkillsCat}>
+                        <Typography variant="h3">TOOLS</Typography>
+                    </Grid>
+                    <Grid item xs={6} className={classes.SkillsCat}>
+                        <img src={ safeIcon } alt="SAFe Icon" />
+                        <Typography>SAFe</Typography>
+                    </Grid>
+                    <Grid item xs={6} className={classes.SkillsCat}>
+                        <img src={ agileIcon } alt="Agile Icon" />
+                        <Typography>Agile</Typography>
+                    </Grid>
+                    <Grid item xs={6} className={classes.SkillsCat}>
+                        <img src={ dockerIcon } alt="Docker Icon" />
+                        <Typography>Docker</Typography>
+                    </Grid>
+                    <Grid item xs={6} className={classes.SkillsCat}>
+                        <img src={ gitIcon } alt="Git Icon" />
+                        <Typography>Git</Typography>
+                    </Grid>
                 </Grid>
-                <Grid item xs={4}>
-                    <item><Typography varient="h3">BACKEND</Typography></item>
-                    <item><img src={ nodeIcon } alt="Node Icon" /><Typography>Node</Typography></item>
-                    <item><img src={ mongodbIcon } alt="MongoDB Icon" /><Typography>MongoDB</Typography></item>
-                    <item><img src={ postgresqlIcon } alt="PostgreSQL Icon" /><Typography>PostgreSQL</Typography></item>
+                <Grid item xs={12} sm={12} md={4} container>
+                    <Grid item xs={12} className={classes.SkillsCat}>
+                        <Typography variant="h3">BACKEND</Typography>
+                    </Grid>
+                    <Grid item xs={6} className={classes.SkillsCat}>
+                        <img src={ nodeIcon } alt="Node Icon" />
+                        <Typography>Node</Typography>
+                    </Grid>
+                    <Grid item xs={6} className={classes.SkillsCat}>
+                        <img src={ mongodbIcon } alt="MongoDB Icon" />
+                        <Typography>MongoDB</Typography>
+                    </Grid>
+                    <Grid item xs={6} className={classes.SkillsCat}>
+                        <img src={ postgresqlIcon } alt="PostgreSQL Icon" />
+                        <Typography>PostgreSQL</Typography>
+                    </Grid>
                 </Grid>
             </Grid>
+            </Paper>
         </ ThemeProvider>
     );
 }
