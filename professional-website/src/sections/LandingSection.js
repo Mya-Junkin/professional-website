@@ -1,9 +1,9 @@
-import {Grid, ButtonGroup, Button, Typography, useMediaQuery} from '@material-ui/core';
+import { Grid, ButtonGroup, Button, Typography, useMediaQuery, ThemeProvider} from '@material-ui/core';
 import useStyles from '../styles.js';
-import { ThemeProvider } from '@material-ui/core';
 import theme from '../theme.js';
 
 import SocialLinks from '../components/SocialLinks.js';
+import ScrollToButton from '../components/ScrollToButton.js';
 import landingIll from '../images/landing-illustration.png';
 
 const LandingSection = () => {
@@ -25,20 +25,19 @@ const LandingSection = () => {
                 <Grid item  style={{padding: '1vh'}}>
                     <ButtonGroup 
                         variant="outlined" 
-                        color="secondary" 
                         size="large"
+                        color='secondary'
                         aria-label="navigation button group" 
                         orientation={`${matches ? `horizontal` : `vertical`}`} 
                         className={classes.buttonGroup}
                     >
                     {
                         // TODO: Either style or theme button text to be text-transform uppercase
-                        // TODO: Thicken outline of buttongroup slightly
                     }
-                    <Button variant="outlined"style={{border: '3px solid'}}>SKILLS</Button>
-                    <Button variant="outlined"style={{border: '3px solid'}}>PROJECTS</Button>
-                    <Button variant="outlined"style={{border: '3px solid'}}>ABOUT</Button>
-                    <Button variant="outlined"style={{border: '3px solid'}}>CONTACT</Button>
+                    <ScrollToButton>SKILLS</ScrollToButton>
+                    <ScrollToButton>PROJECTS</ScrollToButton>
+                    <ScrollToButton>ABOUT</ScrollToButton>
+                    <ScrollToButton>CONTACT</ScrollToButton>
                     </ButtonGroup>
                 </Grid>
             </Grid>
