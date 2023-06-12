@@ -14,7 +14,7 @@ const ContactSection = () => {
             <Typography variant='h2' style={{padding: '5vh'}}>CONTACT</Typography>
             <Paper className={classes.ContactCard}>
                 <TextField id="outlined-basic" label="Name" variant="filled" className={classes.ContactFeild}/>
-                <TextField id="outlined-basic" label="Email" variant="filled" className={classes.ContactFeild}/>
+                <TextField id="outlined-basic" label="Email" type='email' variant="filled" className={classes.ContactFeild}/>
                 <TextField id="outlined-multiline-flexible" label="Message" variant="filled" multiline minRows={4} maxRows={6} className={classes.ContactFeild}/>
                 <Button variant='outlined' color={'secondary'} style={{width: '10vw', border: '3px solid', margin: '1vh', display: 'flex', alignSelf: 'center', justifySelf: 'center'}}>Submit</Button>
             </Paper>

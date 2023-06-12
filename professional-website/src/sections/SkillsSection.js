@@ -16,7 +16,7 @@ import nodeIcon from '../images/node-icon.png';
 import mongodbIcon from '../images/mongodb-icon.png';
 import postgresqlIcon from '../images/postgresql-icon.png';
 
-const SkillsSection = () => {
+const SkillsSection = ({ref}) => {
     const classes = useStyles();
 
     return(

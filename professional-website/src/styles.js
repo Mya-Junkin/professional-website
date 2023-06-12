@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         backgroundColor: '#3B4046',
         boxShadow: "5px 10px #1E2329"
-        
+
     },
 
     ContactFeild: {

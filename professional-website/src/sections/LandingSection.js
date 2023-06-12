@@ -34,10 +34,10 @@ const LandingSection = () => {
                     {
                         // TODO: Either style or theme button text to be text-transform uppercase
                     }
-                    <ScrollToButton>SKILLS</ScrollToButton>
-                    <ScrollToButton>PROJECTS</ScrollToButton>
-                    <ScrollToButton>ABOUT</ScrollToButton>
-                    <ScrollToButton>CONTACT</ScrollToButton>
+                    <Button href='' style={{border: '3px solid', borderColor: '#F4B301', color: '#F4B301'}}>SKILLS</Button>
+                    <Button style={{border: '3px solid', borderColor: '#F4B301', color: '#F4B301'}}>PROJECTS</Button>
+                    <Button style={{border: '3px solid', borderColor: '#F4B301', color: '#F4B301'}}>ABOUT</Button>
+                    <Button style={{border: '3px solid', borderColor: '#F4B301', color: '#F4B301'}}>CONTACT</Button>
                     </ButtonGroup>
                 </Grid>
             </Grid>
