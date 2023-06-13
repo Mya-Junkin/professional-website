@@ -14,6 +14,12 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
     },
 
+    buttonGroup: {
+        color: 'green',
+        position: 'sticky',
+        top: '0',
+    },
+
     SkillsPaper: {
         backgroundColor: '#F4B301',
         padding: '5vh',
