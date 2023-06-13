@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
 
     landingGrid: {
         width: '98vw',
-        height: '100vh',
+        height: '90vh',
     },
 
     landingGridItem: {
