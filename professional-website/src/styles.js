@@ -14,12 +14,6 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
     },
 
-    buttonGroup: {
-        color: 'green',
-        position: 'sticky',
-        top: '0',
-    },
-
     SkillsPaper: {
         backgroundColor: '#F4B301',
         padding: '5vh',
@@ -77,7 +71,11 @@ const useStyles = makeStyles((theme) => ({
 
     ContactFeild: {
         backgroundColor: '#F0F0F0',
-        margin: '1vh'
+        margin: '1vh',
+    },
+
+    form: {
+        
     }
 
 
